@@ -1,0 +1,27 @@
+#include <iostream>
+#include <cmath>  // Untuk fungsi sqrt()
+
+using namespace std;
+
+// Fungsi untuk menghitung jarak
+float hitungJarak(float x1, float y1, float x2, float y2) {
+    return sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
+}
+
+int main() {
+    float x1, y1, x2, y2, jarak;
+
+    // Input koordinat titik A dan B
+    cout << "Masukkan koordinat titik A (x1, y1): ";
+    cin >> x1 >> y1;
+    cout << "Masukkan koordinat titik B (x2, y2): ";
+    cin >> x2 >> y2;
+
+    // Panggil fungsi hitungJarak
+    jarak = hitungJarak(x1, y1, x2, y2);
+
+    // Output hasil jarak
+    cout << "Jarak antara titik A dan B adalah: " << jarak << endl;
+
+    return 0;
+}
